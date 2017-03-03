@@ -1,0 +1,237 @@
+/*简略版布局*/
+.clearfix:after{/*专门用来清除浮动*/
+    content: '';
+    display: block;
+    clear: both;
+}
+h1{
+    padding: 12px;
+    color:#fff;
+    border-top: 2px solid #fff;
+    border-bottom:2px solid #fff;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 24px;
+}
+p{
+    color:#fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+ul{
+    margin:0;
+}
+
+/*页头开始*/
+header{
+    background: rgba(0,0,0,0.4);
+}
+nav{
+    background: transparent;
+    height:50px;
+}
+#banner{
+    background: rgba(0,0,0,0.2);
+    height: 700px;
+}
+nav .logo{
+    float: left;
+    padding-left:20px;;
+}
+nav ul{
+    list-style: none;
+    margin:0;
+    float: right;
+}
+nav ul li,nav .logo{
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+}
+nav ul li a{
+    line-height: 50px;
+    text-decoration: none;
+    display: inline-block;
+    height: inherit;
+    color: #fff;
+}
+
+#banner .inner{
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;/*居中*/
+    position: relative;
+    top: 160px;
+}
+#banner .inner h1{
+    margin:0;
+}
+button{
+    border: none;
+    background: #333;
+    color: #eee;
+    padding: 10px;
+}
+#banner button{
+    padding:14px 60px;
+}
+#banner .inner .more{
+    margin-top:320px;
+}
+.sub-heading{
+    line-height: 25px;
+    margin:30px 0;
+}
+.logo{
+    font-size:20px;
+    font-weight: 700;
+    letter-spacing:1px;
+}
+.logo a{
+    color: #fff;
+}
+.hr{
+    width: 100%;
+    height:2px;
+    margin:20px auto;
+
+}
+/*内容开始*/
+.wrapper{
+    max-width: 1080px;
+    margin:0 auto;
+}
+.green-section{
+    background: #089DB0;
+    color: #ffffff;
+    text-align: center;
+    padding:100px 0;
+}
+.green-section .hr{
+    background: #078494;
+    width:60%;
+}
+.green-section .icon-group .icon{
+    display: inline-block;
+    width:80px;
+    height:80px;
+    background: #0d6f7c;
+    transform: rotate(45deg);
+    margin:20px;
+}
+.icon-group{
+    margin-top: 60px;
+}
+.gray-section{
+    background: #000;
+    color: #fff;
+}
+.gray-section .img-section{
+    width:45%;
+}
+.img-section img{/*img的大小和父元素看齐，不然会占据原始大小*/
+    width:100%;
+}
+.gray-section .text-section{
+    width:55%;
+}
+.article-preview>div{
+    float: left;
+    font-size: 0;/*连续两个图片之间出现小缝隙，是因为字体大小不同导致行高不同*/
+}
+.article-preview:nth-child(odd){/*奇数个背景颜色改变*/
+    background-color: rgba(255,255,255,0.05);
+}
+.article-preview:after{/*清除浮动*/
+    content: '';
+    display: block;
+    clear: both;
+}
+.text-section{
+    position: relative;
+    top: 68px;
+    left: 60px;
+}
+.text-section h2{
+    font-size:24px;
+    margin-bottom: 20px;
+}
+.text-section .sub-heading{
+    font-size: 20px;
+    margin-top: 0;
+}
+.text-section > *{
+    max-width: 90%;
+}
+
+.purple-section{
+    padding: 80px;
+    background: #3f3965;
+    color: #fff;
+}
+.purple-section .heading-wrapper{
+    text-align: center;
+}
+.purple-section .hr{
+    background: #373259;
+    width:60%;;
+}
+.card{
+    float: left;
+    width:50%;
+    min-height: 300px;
+    padding:50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box ;
+    box-sizing: border-box;
+    /*border:1px solid white;*/
+}
+.card:first-child{
+    background: rgba(0,0,0,0.04);
+}
+.card:nth-child(2){
+    background: rgba(0,0,0,0.08);
+}
+.card:nth-child(3){
+    background: rgba(0,0,0,0.12);
+}
+.card:nth-child(4){
+    background: rgba(0,0,0,0.16);
+}
+.card:nth-child(5){
+    background: rgba(0,0,0,0.20);
+}
+.card:nth-child(6){
+    background: rgba(0,0,0,0.24);
+}
+/*页脚开始*/
+footer{
+    background: #333333;
+    color: #ffffff;
+    min-height: 200px;
+    text-align: center;
+}
+.share-group {
+    display: block;
+    width:1080px;
+    margin:0 auto;
+    padding:50px;
+}
+.share-group li{
+    display: inline-block;
+    padding:10px;
+}
+.copy{
+    padding-bottom: 20px;
+}
+
+.main-wrapper{
+    background: #444 url("../img/banner.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;/*固定不动*/
+    background-size: cover;/*以封面形式*/
+    background-position: center;
+}
