@@ -37,6 +37,7 @@ nav{
     background: rgba(0,0,0,0.2);
     height: 700px;
 }
+
 nav .logo{
     float: left;
     padding-left:20px;;
@@ -45,6 +46,9 @@ nav ul{
     list-style: none;
     margin:0;
     float: right;
+}
+.active{
+    border-bottom: 2px solid #fff;
 }
 nav ul li,nav .logo{
     display: inline-block;
@@ -66,9 +70,14 @@ nav ul li a{
     position: relative;
     top: 160px;
 }
+#banner .inner {
+    top:80px;
+}
+
 #banner .inner h1{
     margin:0;
 }
+
 button{
     border: none;
     background: #333;
@@ -79,7 +88,8 @@ button{
     padding:14px 60px;
 }
 #banner .inner .more{
-    margin-top:320px;
+    margin-top:50px;
+    color: rgb(255,255,255);
 }
 .sub-heading{
     line-height: 25px;
@@ -234,4 +244,79 @@ footer{
     background-attachment: fixed;/*固定不动*/
     background-size: cover;/*以封面形式*/
     background-position: center;
+    overflow: hidden;/*不会有水平滚动条*/
+}
+/*点击侧边栏时，变暗的效果*/
+.mask{
+    display: none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0,0,0,0.3);
+}
+/*侧栏*/
+#sidebar{
+    position: fixed;
+    top:0;
+    /*right:-300px;*/
+    right:0;
+    -webkit-transform: translate(300px, 0);
+    -moz-transform: translate(300px, 0);
+    -ms-transform: translate(300px, 0);
+    -o-transform: translate(300px, 0);
+    transform: translate(300px, 0);
+    bottom:0;
+    width:300px;
+    background: #333;
+    padding:20px 0;
+    transition:right 0.5s;
+}
+#sidebar ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+
+}
+#sidebar ul a{/*同设置ul li{padding}*/
+    padding:10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    width:100%;
+}
+#sidebar ul a:hover{
+    background: #444;
+}
+/*返回顶部*/
+.back_to_top{
+    position: fixed;
+    bottom:30px;
+    right: 30px;
+    border:1px solid #888;
+}
+
+/*文章页*/
+.article #banner{
+    height: 300px;
+}
+.article h1{
+    border:none;
+}
+.article .content{
+    background: #fefefe;
+}
+.content_wrapper{
+    width: 1080px;
+    margin:0 auto;
+}
+article{
+    line-height: 2;
+    padding:10px 0;
+}
+.article_info{
+    font-size: 14px;
+    color: #888;
+    padding:16px 0;
 }
